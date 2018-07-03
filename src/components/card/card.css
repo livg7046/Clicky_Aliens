@@ -1,0 +1,9 @@
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    padding: 10%;
+    /* background-color: #95f441;*/
+    border: none;
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "image": "images/10.jpg",
+        "id": 1,
+        "clicks": 0
+    },
+    {
+        "image": "images/alien_queen.jpg",
+        "id": 2,
+        "clicks": 0
+    },
+    {
+        "image": "images/aliens_newt.jpg",
+        "id": 3,
+        "clicks": 0
+    },
+    {
+        "image": "images/chestburster.jpg",
+        "id": 4,
+        "clicks": 0
+    },
+    {
+        "image": "images/egg.png",
+        "id": 5,
+        "clicks": 0
+    }
+]
