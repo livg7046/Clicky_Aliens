@@ -4,9 +4,9 @@ import "./card.css";
 const Card = props => (
     
     <div className="card col-sm-3">
-        <div onClick={() => props.action(props.clicked)} className="img container">
-            <img className="card-img-top" alt={props.url} src={props.url}/>
-        </div>
+        {/* <div  className="img container"> */}
+            <img className="card-img-top" onClick={() => props.action(props.clicked)} alt={props.url} src={props.url}/>
+        {/* </div> */}
         
     </div>
 );

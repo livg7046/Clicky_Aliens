@@ -1,27 +1,62 @@
 [
     {
-        "image": "images/10.jpg",
+        "url": "images/alien-awakening.png",
         "id": 1,
-        "clicks": 0
+        "clicked": false
     },
     {
-        "image": "images/alien_queen.jpg",
+        "url": "images/alien_queen.jpg",
         "id": 2,
-        "clicks": 0
+        "clicked": false
     },
     {
-        "image": "images/aliens_newt.jpg",
+        "url": "images/aliens_newt.jpg",
         "id": 3,
-        "clicks": 0
+        "clicked": false
     },
     {
-        "image": "images/chestburster.jpg",
+        "url": "images/elevator.jpg",
         "id": 4,
-        "clicks": 0
+        "clicked": false
     },
     {
-        "image": "images/egg.png",
+        "url": "images/egg.png",
         "id": 5,
-        "clicks": 0
+        "clicked": false
+    },
+    {
+        "url": "images/get away.jpg",
+        "id": 6,
+        "clicked": false
+    },
+    {
+        "url": "images/mouths.jpg",
+        "id": 7,
+        "clicked": false
+    },
+    {
+        "url": "images/ripley_suit.png",
+        "id": 8,
+        "clicked": false
+    },
+    {
+        "url": "images/2807787-landscape-digital-art-prometheus-movie-spaceship-aliens___landscape-nature-wallpapers.jpg",
+        "id": 9,
+        "clicked": false
+    },
+    {
+        "url": "images/Aliens-1986-newt-and-alien.jpg",
+        "id": 10,
+        "clicked": false
+    },
+    {
+        "url": "images/ship.jpg",
+        "id": 11,
+        "clicked": false
+    },
+    {
+        "url": "images/med_1475530740_00017.jpg",
+        "id": 10,
+        "clicked": false
     }
-]
+    ]

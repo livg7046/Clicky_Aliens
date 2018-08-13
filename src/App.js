@@ -1,55 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import ReactTimeout from 'react-timeout'
 import Card from "./components/card/";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Alert from './components/alert';
+import data from './images.json';
 
 class App extends Component {
   state = {
     score: 0,
-    message: "Don't click the same card twice!",
-    images: [
-      {
-          "url": "images/alien-awakening.png",
-          "id": 1,
-          "clicked": false
-      },
-      {
-          "url": "images/alien_queen.jpg",
-          "id": 2,
-          "clicked": false
-      },
-      {
-          "url": "images/aliens_newt.jpg",
-          "id": 3,
-          "clicked": false
-      },
-      {
-          "url": "images/elevator.jpg",
-          "id": 4,
-          "clicked": false
-      },
-      {
-          "url": "images/egg.png",
-          "id": 5,
-          "clicked": false
-      },
-      {
-        "url": "images/get away.jpg",
-        "id": 5,
-        "clicked": false
-    },
-    {
-      "url": "images/mouths.jpg",
-      "id": 5,
-      "clicked": false
-    },
-    {
-      "url": "images/ripley_suit.png",
-      "id": 5,
-      "clicked": false
-    }
-  ]
+    message: "Click on each image to win!  But only click once...",
+    images: data,
+    isHidden: true
   }
   
   randomize(array) {
@@ -66,6 +29,7 @@ class App extends Component {
   
     if (this.state.images[index].clicked === false) {
       imageArray[index].clicked = true;
+      console.log(this.state.images[index])
       tempScore++;
       this.setState({
         images: imageArray, 
@@ -83,12 +47,33 @@ class App extends Component {
     }
   }
 
+  toggle = () => {
+    this.setState({isHidden: !this.state.isHidden})
+  }
+
   youLose = () => {
-    this.setState({message:"You Lose!, try again!"});
-    this.setState({
-      score: 0
-      
-    })
+    console.log(this.state.images)
+    this.setState({message:"You Lose!, try again!", score: 0});
+    this.setState({isHidden: false});
+    setTimeout(this.newGame, 2000);
+    console.log(this.state.images)
+    // this.setState({
+    //   score: 0
+    // });
+  }
+
+  newGame = () => {
+    this.toggle();
+    this.initArray();
+  };
+
+  initArray = () => {
+    var i;
+    let imageArray = this.state.images;
+    for(i=0; i < imageArray.length; i++) {
+      imageArray[i].clicked= false;
+    }
+    this.setState({images : imageArray, message: "In space, no one can hear you scream" })
   }
   
   youWin = () => {
@@ -105,15 +90,19 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src="images/title2.png" className="App-logo" alt="logo" />
-          <h1 className="App-title">                <div id="score">
-                  Score: {this.state.score}
-                </div>
-                <div id="message" >
-                  {this.state.message}
-                </div></h1>
+
+                
+              <div id="message" >
+                {this.state.message}
+              </div>
+          
+                <div id="score">
+            Score: {this.state.score}/8
+            </div>
         </header>
         <div className="App-main">
-          <div className="container">
+          { !this.state.isHidden && <Alert /> }
+          <div className="container" id="cardDiv">
           {
             
             this.state.images.map((image, index) =>

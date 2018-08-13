@@ -1,3 +1,5 @@
+
+  
 .App {
   text-align: center;
 }
@@ -9,15 +11,17 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 250px;
+  background-color: rgb(19,9,20);
+  height: 225px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+#message {
   font-size: 1.5em;
-  margin-top: 80px;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 50px;
+  color: #B4C900;
 }
 
 .App-intro {
@@ -27,4 +31,30 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App-main {
+  background-color: rgb(19,9,20);
+  height: 100%;
+}
+
+#score {
+  /* float: right; */
+  font-size: 200%;
+  font-family: fantasy;
+  /* margin-top: 50px; */
+  /* position: absolute; */
+  /* margin-left: 12%; */
+}
+
+
+
+#youLoseDiv {
+  position: absolute;
+  z-index: 5;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
+  background-color: rgba(0, 0, 0, 0.8);
 }
