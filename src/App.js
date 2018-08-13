@@ -10,7 +10,7 @@ import data from './images.json';
 class App extends Component {
   state = {
     score: 0,
-    message: "Click on each image to win!  But only click once...",
+    message: "Click on each image to win!  But only click each one once...",
     images: data,
     isHidden: true
   }
@@ -73,7 +73,7 @@ class App extends Component {
     for(i=0; i < imageArray.length; i++) {
       imageArray[i].clicked= false;
     }
-    this.setState({images : imageArray, message: "In space, no one can hear you scream" })
+    this.setState({images : imageArray, message: "In space, no one can hear you scream..." })
   }
   
   youWin = () => {
@@ -97,7 +97,7 @@ class App extends Component {
               </div>
           
                 <div id="score">
-            Score: {this.state.score}/8
+            Score: {this.state.score}/12
             </div>
         </header>
         <div className="App-main">
